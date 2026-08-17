@@ -1,0 +1,16 @@
+javac -cp "junit-platform-console-standalone-1.11.0.jar:out" -d out filename
+
+java -cp "junit-platform-console-standalone-1.11.0.jar:out" org.junit.platform.console.ConsoleLauncher -execute --scan-class-path 
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+PYTHON
+
+
+import unittest
+
+from account_function import check_balance
+
+python3 -m unittest filename
