@@ -1,8 +1,8 @@
 def likes(names):
-    String reply = ""
+    reply = ""
     
     if(len(names) == 0):
-        reply = "no one likes this":
+        reply = "no one likes this"
     elif(len(names) == 1):
         reply = reply + names[0] + " likes this"
     elif (len(names) > 1 and len(names) <= 3):
@@ -24,3 +24,5 @@ def likes(names):
     
     
 friends = ["Alex", "Jacob"];
+
+print(likes(friends))
