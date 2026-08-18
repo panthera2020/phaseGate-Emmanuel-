@@ -15,7 +15,7 @@ def likes(names):
             
         
         
-        reply = reply + " likes this";
+        reply = reply + " likes this"
     else:
         reply = reply + names[0] + ", " + names[1] + " and " + names.length - 2 +" others likes this"
     
@@ -23,6 +23,6 @@ def likes(names):
     return reply
     
     
-friends = ["Alex", "Jacob"];
+friends = ["Alex", "Jacob"]
 
 print(likes(friends))
