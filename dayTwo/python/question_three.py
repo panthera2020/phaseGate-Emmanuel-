@@ -1,6 +1,7 @@
 total = 0
 
 for count in range(1,101):
+    total = 0
     number = count
     while(number > 0):
         digit = number % 10;

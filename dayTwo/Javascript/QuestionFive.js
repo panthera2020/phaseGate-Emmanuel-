@@ -4,6 +4,7 @@ let store = 0;
 let counterStore = 0;
 let counter = 0;
 let consecutiveDigits = "";
+let longestRun = "";
 let number = valueOfN;
 
 while(number > 0){
@@ -11,17 +12,20 @@ while(number > 0){
     let digit = number % 10;
     if(digit == store){
         counter++;
-        if(counter > counterStore){
-            consecutiveDigits += digit;   
-        }
+        consecutiveDigits += digit;
     }else{
+        consecutiveDigits = "" + digit;
+        counter = 1;
+    }
+    
+    if(counter > counterStore){
         counterStore = counter;
-        counter = 0;
+        longestRun = consecutiveDigits;
     }
     
     store = digit;
-    number /= 10;
+    number = Math.floor(number / 10);
  
 }
 
-console.log("longest run is " + consecutiveDigits + " lenght " + consecutiveDigits.length());
+console.log("longest run is " + longestRun + " lenght " + longestRun.length);

@@ -6,6 +6,7 @@ public class QuestionFive {
         int counterStore = 0;
         int counter = 0;
         String consecutiveDigits = "";
+        String longestRun = "";
         int number = valueOfN;
         
         while(number > 0){
@@ -13,12 +14,15 @@ public class QuestionFive {
             int digit = number % 10;
             if(digit == store){
                 counter++;
-                if(counter > counterStore){
-                    consecutiveDigits += digit;   
-                }
+                consecutiveDigits += digit;   
             }else{
+                consecutiveDigits = "" + digit;
+                counter = 1;
+            }
+            
+            if(counter > counterStore){
                 counterStore = counter;
-                counter = 0;
+                longestRun = consecutiveDigits;
             }
             
             store = digit;
@@ -26,6 +30,7 @@ public class QuestionFive {
          
         }
         
-        System.out.println("longest run is " + consecutiveDigits + " lenght " + consecutiveDigits.length());
+        System.out.println("longest run is " + longestRun + " lenght " + longestRun.length());
     }
 }
+

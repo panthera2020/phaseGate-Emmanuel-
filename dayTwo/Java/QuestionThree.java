@@ -4,6 +4,7 @@ public class QuestionThree {
         int sum = 0;
         
         for(int count = 1; count <= 100; count++){
+            sum = 0;
             int number = count;
             while(number > 0){
                 int digit = number % 10;

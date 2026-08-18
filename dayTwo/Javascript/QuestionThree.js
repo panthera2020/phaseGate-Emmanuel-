@@ -1,6 +1,7 @@
 let sum = 0;
 
 for(let count = 1; count <= 100; count++){
+    sum = 0;
     let number = count;
     while(number > 0){
         let digit = number % 10;
