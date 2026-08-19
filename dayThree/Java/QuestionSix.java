@@ -5,8 +5,9 @@ public class QuestionSix {
         
         for(int index = 0; index < word.length(); index++){
             char letter = word.charAt(index);
+            int ascii = letter;
             
-            System.out.println(letter + "index is " + valueOf(letter));
+            System.out.println(letter + " index is " + ascii);
         }
     }
 }
