@@ -13,10 +13,11 @@ def getBalance():
 
 
 def deposit(newAmount):
-    updated[0] = newAmount
-    updated[1] = newAmount + account_balance
-    updated[2] = "Deposited: " + str(newAmount) + " | New Balance " + str(updated[1])
-    transactionHistory.append(updated[2])
+    if(newAmount > 0):
+        updated[0] = newAmount
+        updated[1] = newAmount + account_balance
+        updated[2] = "Deposited: " + str(newAmount) + " | New Balance " + str(updated[1])
+        transactionHistory.append(updated[2])
 
 def getDepositReply():
     return updated[2]
@@ -24,10 +25,11 @@ def getDepositReply():
 
 
 def withdraw(newAmount):
-    updated[0] = newAmount;
-    updated[1] = updated[1] - newAmount
-    updated[2] = "Withdrew: " + str(newAmount) + " | New Balance " + str(updated[1])
-    transactionHistory.append(updated[2])
+    if(updated[1] >= newAmount):
+        updated[0] = newAmount;
+        updated[1] = updated[1] - newAmount
+        updated[2] = "Withdrew: " + str(newAmount) + " | New Balance " + str(updated[1])
+        transactionHistory.append(updated[2])
 
 def getWithdrawalReply():
     return updated[2]
