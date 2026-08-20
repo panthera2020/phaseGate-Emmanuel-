@@ -7,7 +7,7 @@ let getBalance=()=>{
     return balance;
 }
 
-console.log(getBalance());
+//console.log(getBalance());
 
 let deposit=(newAmount)=>{
     amount = newAmount;
@@ -20,10 +20,10 @@ let transactionHistory=()=>{
     return reply;
 }
 
-amount = 1000;
-
-deposit(amount);
-
-console.log();
-console.log(getBalance());
-console.log(transactionHistory());
+//amount = 1000;
+//
+//deposit(amount);
+//
+//console.log();
+//console.log(getBalance());
+//console.log(transactionHistory());
