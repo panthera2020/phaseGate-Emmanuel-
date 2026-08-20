@@ -1,21 +1,35 @@
 public class TransactionLogApp {
-
-    public static double getAccountBalance(){
-        double accountBalance = 0;
-        
-        return accountBalance;
+    public double balance;
+    
+    public TransactionLogApp(){
+        double balance = 0.0;
+        this.balance = balance;
     }
     
-    public static double deposit(double amount, double balance){
-        
+    public void setBalance(double amount){
+        double balance = amount;
+        this.balance = balance;
+    }
+    
+    public double getBalance(){
+        return balance;
+    }
+    
+    public void deposit(double amount){
         double newBalance = amount + balance;
         
-        return newBalance;
+        setBalance(newBalance);
     }
     
-    public static String getTransactionHistory(double amount, double balance){
-        String format = "Deposited: #" + amount + " | New Balance: #" + deposit(amount,balance);
-        
-        return format;
-    }
+//    public static String getTransactionHistory(double amount, double balance){
+//        String format = "Deposited: #" + amount + " | New Balance: #" + deposit(amount,balance);
+//        
+//        return format;
+//    }
+//    
+//    public static double newDeposit(double amount){
+//        double newUpdatedBalance = amount + newBalance;
+//        
+//        return newUpdatedBalance;
+//    }
 }

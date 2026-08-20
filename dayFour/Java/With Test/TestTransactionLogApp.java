@@ -2,13 +2,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//import TransactionLogApp.*;
+
 public class TestTransactionLogApp {
 
     @Test
     public void TestThatWhenICheckAcountBalanceIgetTheAccountBalance(){
-        double actualBalance = TransactionLogApp.getAccountBalance();
+        TransactionLogApp account = new TransactionLogApp();
         
-        double expectedBalance = 0;
+        double actualBalance = account.getBalance();
+        
+        double expectedBalance = 0.0;
         
         assertEquals(expectedBalance, actualBalance); 
     }
@@ -18,10 +22,12 @@ public class TestTransactionLogApp {
         //Given
         double amount = 1000;
         
-        double balance = TransactionLogApp.getAccountBalance();
-        
         //When 
-        double actualBalance = TransactionLogApp.deposit(amount,balance);
+        TransactionLogApp account = new TransactionLogApp();
+        
+        account.deposit(amount);
+        
+        double actualBalance = account.getBalance();
         
         double expectedBalance = 1000;
         
@@ -29,19 +35,44 @@ public class TestTransactionLogApp {
         assertEquals(expectedBalance,actualBalance);
     }
     
-    @Test
-    public void TestThatWhenIDepositItReturnsTransactionHistory(){
-        //Given
-        double amount = 1000;
-        
-        double balance = TransactionLogApp.getAccountBalance();
-        
-        //When
-        String actualHistory = TransactionLogApp.getTransactionHistory(amount, balance);
-        
-        String expectedHistory = "Deposited: #1000.0 | New Balance: #1000.0";
-        
-        //Check
-        assertEquals(expectedHistory, actualHistory);
-    }
+//    @Test
+//    public void TestThatWhenIDepositItReturnsTransactionHistory(){
+//        //Given
+//        double amount = 1000;
+//        
+//        double balance = TransactionLogApp.getAccountBalance();
+//        
+//        //When
+//        String actualHistory = TransactionLogApp.getTransactionHistory(amount, balance);
+//        
+//        String expectedHistory = "Deposited: #1000.0 | New Balance: #1000.0";
+//        
+//        //Check
+//        assertEquals(expectedHistory, actualHistory);
+//    }
+//    
+//    @Test
+//    public void TestThatWhenIDepositItAddsToNewBalance(){
+//        //Given
+//        double amount = 5000;
+//        
+//        //When
+//        double actualUpdatedBalance = TransactionLogApp.newDeposit(amount);
+//        
+//        double expectedUpdatedBalance = 6000;
+//        
+//        //Check
+//        assertEquals(actualUpdatedBalance, expectedUpdatedBalance);
+//    }
 }
+
+
+
+
+
+
+
+
+
+
+
