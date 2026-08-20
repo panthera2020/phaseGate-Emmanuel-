@@ -17,4 +17,6 @@ for(let count = 0; count < 10; count++){
 let average = total / counter; 
 
 console.log();
+console.log("The sum of the even scores is: " + total);
+console.log();
 console.log("The average of the even scores is: " + average);

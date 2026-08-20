@@ -11,4 +11,6 @@ for _ in range(10):
 average = total / counter; 
 
 print();
+print("The sum of the even scores is: ", total);
+print();
 print("The average of the even scores is: ", average);

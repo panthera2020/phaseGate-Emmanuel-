@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TaskSix {
+public class TaskSeven {
     public static void main(String... args){
         Scanner input = new Scanner(System.in);
         
@@ -21,6 +21,8 @@ public class TaskSix {
         
         double average = (double) total / counter; 
         
+        System.out.println();
+        System.out.println("The sum of the even scores is: " + total);
         System.out.println();
         System.out.println("The average of the even scores is: " + average);
     }
