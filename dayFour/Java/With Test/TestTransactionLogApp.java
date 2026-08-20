@@ -105,6 +105,26 @@ public class TestTransactionLogApp {
         //Check
         assertEquals(expectedHistory, actualHistory);
     }
+    
+    @Test
+    public void ThatWhenIRequestForTransactionHistoryItReturnsAllTheTransactionThatHasBeenMade(){
+        //Given
+        double depositAmount = 5000;
+        double withdrawalAmount = 2000;
+        
+        //When
+        TransactionLogApp account = new TransactionLogApp();
+        
+        account.deposit(depositAmount);
+        account.withdraw(withdrawalAmount);
+        
+        String [] actualHistory = account.getAllTransactionHistory();
+        
+        String [] expectedHistory = {"Deposited: #5000.0 | New Balance: #5000.0","Withdrew: #2000.0 | New Balance: #3000.0"};
+        
+        //Check
+        assertArrayEquals(expectedHistory, actualHistory);
+    }
 }
 
 

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class TransactionLogApp {
     private double balance;
     private double depositAmount;
@@ -63,6 +65,20 @@ public class TransactionLogApp {
         return format;
     }
     
+    public String [] getAllTransactionHistory(){
+        ArrayList <String> transactionHistory = new ArrayList<String>();
+        
+        transactionHistory.add(getDepositTransactionHistory());
+        transactionHistory.add(getWithdrawalTransactionHistory());
+        
+        String [] arrayOfTransactions = new String[transactionHistory.size()];
+        
+        for(int count = 0; count < arrayOfTransactions.length; count++){
+            arrayOfTransactions[count] = transactionHistory.get(count);
+        }
+        
+        return arrayOfTransactions;
+    }
 
 }
 
