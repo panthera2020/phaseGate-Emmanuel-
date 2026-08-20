@@ -1,12 +1,15 @@
 public class TransactionLogApp {
     private double balance;
     private double depositAmount;
+    private double withdrawalAmount;
     
     public TransactionLogApp(){
         double balance = 0.0;
         double depositAmount = 0.0;
+        double withdrawalAmount = 0.0;
         this.balance = balance;
         this.depositAmount = depositAmount;
+        this.withdrawalAmount = withdrawalAmount;
     }
     
     public void setBalance(double amount){
@@ -19,6 +22,11 @@ public class TransactionLogApp {
         this.depositAmount = depositAmount;
     }
     
+    public void setWithdrawalAmount(double amount){
+        double withdrawalAmount = amount;
+        this.withdrawalAmount = withdrawalAmount;
+    }
+    
     public double getBalance(){
         return balance;
     }
@@ -27,16 +35,26 @@ public class TransactionLogApp {
         return depositAmount;
     }
     
+    public double getWithdrawalAmount(){
+        return withdrawalAmount;
+    }
+    
     public void deposit(double amount){
         double newBalance = amount + balance;
         setDepositAmount(amount);
         setBalance(newBalance);
     }
     
-    public String getTransactionHistory(){
+    public String getDepositTransactionHistory(){
         String format = "Deposited: #" + depositAmount + " | New Balance: #" + balance;
         
         return format;
+    }
+    
+    public void withdraw(double amount){
+        double newBalance = balance - amount;
+        setWithdrawalAmount(amount);
+        setBalance(newBalance);
     }
     
 

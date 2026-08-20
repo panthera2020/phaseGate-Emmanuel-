@@ -38,7 +38,7 @@ public class TestTransactionLogApp {
         TransactionLogApp account = new TransactionLogApp();
         
         //When
-        String actualHistory = account.getTransactionHistory();
+        String actualHistory = account.getDepositTransactionHistory();
         
         String expectedHistory = "Deposited: #0.0 | New Balance: #0.0";
         
@@ -61,6 +61,26 @@ public class TestTransactionLogApp {
         double actualUpdatedBalance = account.getBalance();
         
         double expectedUpdatedBalance = 6000;
+        
+        //Check
+        assertEquals(actualUpdatedBalance, expectedUpdatedBalance);
+    }
+    
+    @Test
+    public void TestThatWhenIWithdrawFromBalanceAfterIDepositBalanceReduces(){
+        //Given
+        double depositAmount = 5000;
+        double withdrawalAmount = 2000;
+        
+        //When
+        TransactionLogApp account = new TransactionLogApp();
+        
+        account.deposit(depositAmount);
+        account.withdraw(withdrawalAmount);
+        
+        double actualUpdatedBalance = account.getBalance();
+        
+        double expectedUpdatedBalance = 3000;
         
         //Check
         assertEquals(actualUpdatedBalance, expectedUpdatedBalance);
