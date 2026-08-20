@@ -21,15 +21,11 @@ public class TransactionLogApp {
         setBalance(newBalance);
     }
     
-//    public static String getTransactionHistory(double amount, double balance){
-//        String format = "Deposited: #" + amount + " | New Balance: #" + deposit(amount,balance);
-//        
-//        return format;
-//    }
-//    
-//    public static double newDeposit(double amount){
-//        double newUpdatedBalance = amount + newBalance;
-//        
-//        return newUpdatedBalance;
-//    }
+    public static String getTransactionHistory(double amount, double balance){
+        String format = "Deposited: #" + amount + " | New Balance: #" + deposit(amount,balance);
+        
+        return format;
+    }
+    
+
 }
