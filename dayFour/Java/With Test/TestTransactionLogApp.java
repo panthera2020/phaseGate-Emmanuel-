@@ -18,7 +18,14 @@ public class TestTransactionLogApp {
         //Given
         double amount = 1000;
         
+        double balance = TransactionLogApp.getAccountBalance();
+        
         //When 
-        double actualBalance = TransactionLogApp.
+        double actualBalance = TransactionLogApp.deposit(amount,balance);
+        
+        double expectedBalance = 1000;
+        
+        //Check
+        assertEquals(expectedBalance,actualBalance);
     }
 }

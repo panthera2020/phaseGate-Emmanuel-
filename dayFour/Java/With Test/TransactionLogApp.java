@@ -6,9 +6,9 @@ public class TransactionLogApp {
         return accountBalance;
     }
     
-    public static double deposit(double amount){
+    public static double deposit(double amount, double balance){
         
-        double newBalance = getAccountBalance() + amount;
+        double newBalance = amount + balance;
         
         return newBalance;
     }
