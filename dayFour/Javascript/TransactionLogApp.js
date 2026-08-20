@@ -17,8 +17,8 @@ let getBalance=()=>{
 let deposit=(newAmount)=>{
     if(newAmount > 0){
         updated[0] = newAmount;
-        updated[1] = newAmount + account_balance;
-        updated[2] = "Deposited: " + str(newAmount) + " | New Balance " + str(updated[1]);
+        updated[1] = newAmount + updated[1];
+        updated[2] = "Deposited: " + newAmount + " | New Balance " + updated[1];
         transactionHistory.push(updated[2]);
         }
     }
@@ -33,7 +33,7 @@ let withdraw=(newAmount)=>{
     if(updated[1] >= newAmount){
         updated[0] = newAmount;
         updated[1] = updated[1] - newAmount;
-        updated[2] = "Withdrew: " + str(newAmount) + " | New Balance " + str(updated[1]);
+        updated[2] = "Withdrew: " + newAmount + " | New Balance " + updated[1];
         transactionHistory.push(updated[2]);
         }
     }
@@ -48,14 +48,14 @@ console.log("Welcome to Transaction Log App");
 
 while (userInput != 4){
     
-    welcome = """
+    let welcome = `
 
 1. Deposit
 2. Withdraw
 3. Show Transactions
 4. Exit
     
-    """
+    `
     console.log(welcome);
     
     let userInput = Number(scanner("Enter your choice: "));

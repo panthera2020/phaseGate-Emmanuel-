@@ -15,7 +15,7 @@ def getBalance():
 def deposit(newAmount):
     if(newAmount > 0):
         updated[0] = newAmount
-        updated[1] = newAmount + account_balance
+        updated[1] = newAmount + updated[1]
         updated[2] = "Deposited: " + str(newAmount) + " | New Balance " + str(updated[1])
         transactionHistory.append(updated[2])
 
