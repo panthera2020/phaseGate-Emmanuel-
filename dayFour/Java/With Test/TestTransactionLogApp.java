@@ -28,4 +28,20 @@ public class TestTransactionLogApp {
         //Check
         assertEquals(expectedBalance,actualBalance);
     }
+    
+    @Test
+    public void TestThatWhenIDepositItReturnsTransactionHistory(){
+        //Given
+        double amount = 1000;
+        
+        double balance = TransactionLogApp.getAccountBalance();
+        
+        //When
+        String actualHistory = TransactionLogApp.getTransactionHistory(amount, balance);
+        
+        String expectedHistory = "Deposited: #1000.0 | New Balance: #1000.0";
+        
+        //Check
+        assertEquals(expectedHistory, actualHistory);
+    }
 }

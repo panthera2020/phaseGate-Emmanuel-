@@ -12,4 +12,10 @@ public class TransactionLogApp {
         
         return newBalance;
     }
+    
+    public static String getTransactionHistory(double amount, double balance){
+        String format = "Deposited: #" + amount + " | New Balance: #" + deposit(amount,balance);
+        
+        return format;
+    }
 }
