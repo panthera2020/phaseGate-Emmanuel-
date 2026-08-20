@@ -57,5 +57,17 @@ public class TransactionLogApp {
         setBalance(newBalance);
     }
     
+    public String getWithdrawalTransactionHistory(){
+        String format = "Withdrew: #" + withdrawalAmount + " | New Balance: #" + balance;
+        
+        return format;
+    }
+    
 
 }
+
+
+
+
+
+
