@@ -9,8 +9,8 @@ let similarLeadingPrefixIn=(arrayOfStrings)=>{
          storeString = "";
          similarPrefix = "";
          
-        for(let index = 0; index < word.length(); index++){
-            if(firstWord.charAt(index) == word.charAt(index) && index < firstWord.length()){
+        for(let index = 0; index < word.length; index++){
+            if(firstWord.charAt(index) == word.charAt(index) && index < firstWord.length){
                 similarPrefix += firstWord.charAt(index);
                 
             }
