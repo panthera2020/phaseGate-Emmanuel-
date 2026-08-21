@@ -21,8 +21,13 @@ let similarLeadingPrefixIn=(arrayOfStrings)=>{
 
         firstWord = similarPrefix;
         storeString = similarPrefix;
-        if(similarPrefix.equals(storeString)){
+        if(similarPrefix === storeString ){
             similarLeadingPrefix = similarPrefix;
         }
     }
 return similarLeadingPrefix;
+}
+
+strs = ["flower", "flow", "flight"];
+
+console.log(similarLeadingPrefixIn(strs));
