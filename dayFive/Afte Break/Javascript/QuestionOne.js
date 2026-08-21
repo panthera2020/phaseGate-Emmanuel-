@@ -7,7 +7,7 @@ let addDigits(number){
         
         sum += digits;
         
-        number /= 10;
+        number = Math.floor(number / 10);
         
         counter++;
         
@@ -28,7 +28,7 @@ let countDigits(number){
         
         counter++;
         
-        number /= 10;
+        number = Math.floor(number / 10);
     }
 return counter;
 }
