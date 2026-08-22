@@ -1,4 +1,4 @@
-def moveZeroElementToEndOfArrayIn(array_Of_numbers):
+def move_zero_element_to_end_of_array_in(array_Of_numbers):
     store = 0
     
     for index in range (len(array_Of_numbers)):

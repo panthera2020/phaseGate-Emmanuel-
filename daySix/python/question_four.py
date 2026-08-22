@@ -1,54 +1,54 @@
-def sortArrayOf(arrayOfNumbers):
+def sort_array_of(array_of_numbers):
     store = 0
     
-    for count in range(len(arrayOfNumbers)):
-        for counter in range(len(arrayOfNumbers)):
-            if(arrayOfNumbers[count] > arrayOfNumbers[counter]):
-                store = arrayOfNumbers[counter]
-                arrayOfNumbers[counter] = arrayOfNumbers[count]
-                arrayOfNumbers[count] = store
+    for count in range(len(array_of_numbers)):
+        for counter in range(len(array_of_numbers)):
+            if(array_of_numbers[count] > array_of_numbers[counter]):
+                store = array_of_numbers[counter]
+                array_of_numbers[counter] = array_of_numbers[count]
+                array_of_numbers[count] = store
     
-    return arrayOfNumbers
+    return array_of_numbers
 
 
 
-def countDuplicateElementsIn(arrayOfNumbers):
+def count_duplicate_elements_in(array_of_numbers):
    
-   duplicateCounter = 0
+   duplicate_counter = 0
    counter = 0
    store = 0
-   sortArray = sortArrayOf(arrayOfNumbers)
+   sort_array = sort_array_of(array_of_numbers)
    
-   for index in range(len(sortArray)):
+   for index in range(len(sort_array)):
         counter = 0
-        for count in range(len(sortArray)):
-            if(sortArray[index] == sortArray[count] and sortArray[index] != store):
+        for count in range(len(sort_array)):
+            if(sort_array[index] == sort_array[count] and sort_array[index] != store):
                counter += 1
            
         if(counter > 1):
-           duplicateCounter += 1
-           store = sortArray[index]
-   return duplicateCounter
+           duplicate_counter += 1
+           store = sort_array[index]
+   return duplicate_counter
 
 
-def getArrayOfDuplicateElement(arrayOfNumbers):
+def get_array_of_duplicate_element(array_of_numbers):
    
    counter = 0
    store = 0
-   sortArray = sortArrayOf(arrayOfNumbers)
-   duplicateElementArray = []
+   sort_array = sort_array_of(array_of_numbers)
+   duplicate_element_array = []
    
-   for index in range(len(sortArray)):
+   for index in range(len(sort_array)):
         counter = 0
-        for count in range (len(sortArray)):
-           if(sortArray[index] == sortArray[count] and sortArray[index] != store):
+        for count in range (len(sort_array)):
+           if(sort_array[index] == sort_array[count] and sort_array[index] != store):
                counter += 1
          
         if(counter > 1):
-           store = sortArray[index]
-           duplicateElementArray.append(sortArray[index])
+           store = sort_array[index]
+           duplicate_element_array.append(sort_array[index])
            index_counter += 1
         
         
-        return duplicateElementArray;
+        return duplicate_element_array;
 
