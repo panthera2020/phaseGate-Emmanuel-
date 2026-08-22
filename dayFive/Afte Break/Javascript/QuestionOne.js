@@ -1,4 +1,4 @@
-let addDigits(number){
+let addDigits=(number)=>{
     let sum = 0;
     let counter = 0; 
     
