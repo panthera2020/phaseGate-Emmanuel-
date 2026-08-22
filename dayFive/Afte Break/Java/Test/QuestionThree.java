@@ -10,7 +10,6 @@ public class QuestionThree {
              storeString = "";
              similarPrefix = "";
              
-             System.out.println(firstWord);
             for(int index = 0; index < word.length(); index++){
                 if(index < firstWord.length() && firstWord.charAt(index) == word.charAt(index)){
                     similarPrefix += firstWord.charAt(index);
