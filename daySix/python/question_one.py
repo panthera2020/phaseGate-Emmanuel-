@@ -1,53 +1,53 @@
-def checkNumberOfPrimeIn(arrayOfNumbers):
+def check_number_of_prime_in(array_of_numbers):
     counter = 0
     
-    for index in range(len(arrayOfNumbers)):
-        number = arrayOfNumbers[index];
-        if(isPrime(number)):
+    for index in range(len(array_of_numbers)):
+        number = array_of_numbers[index];
+        if(is_prime(number)):
             counter += 1
     
     return counter
 
 
-def isPrime(number):
-    isPrime = False
-    primeCounter = 0
+def is_prime(number):
+    is_prime = False
+    prime_counter = 0
     
     for count in range(1, number + 1):
         if(number % count == 0):
-            primeCounter += 1
+            prime_counter += 1
     
-    if(primeCounter == 2):
-        isPrime = True
+    if(prime_counter == 2):
+        is_prime = True
    
-    return isPrime
+    return is_prime
 
 
-def sortElementsIn(arrayOfNumbers):
+def sort_elements_in(array_of_numbers):
     store = 0
     
-    for index in range (len(arrayOfNumbers)):
-        for count in range (len(arrayOfNumbers)):
-            if(arrayOfNumbers[index] < arrayOfNumbers[count]):
-                store = arrayOfNumbers[index]
-                arrayOfNumbers[index] = arrayOfNumbers[count]
-                arrayOfNumbers[count] = store
+    for index in range (len(array_of_numbers)):
+        for count in range (len(array_of_numbers)):
+            if(array_of_numbers[index] < array_of_numbers[count]):
+                store = array_of_numbers[index]
+                array_of_numbers[index] = array_of_numbers[count]
+                array_of_numbers[count] = store
     
-    return arrayOfNumbers
+    return array_of_numbers
 
 
-def getPrimesIn(arrayOfNumbers):
-    arrayOfPrimes = []
+def get_primes_in(array_of_numbers):
+    array_of_primes = []
     counter = 0
     
     
-    for index in range (len(arrayOfNumbers)):
-        number = arrayOfNumbers[index]
+    for index in range (len(array_of_numbers)):
+        number = array_of_numbers[index]
         
-        if(isPrime(number)):
-            arrayOfPrimes.append(arrayOfNumbers[index])
+        if(is_prime(number)):
+            array_of_primes.append(array_of_numbers[index])
     
-    return arrayOfPrimes
+    return array_of_primes
     
     
     
