@@ -10,7 +10,7 @@ public class MbtiChecker {
         String [] four = {"A. organized, orderly", "B. flexible, adaptable"};
         String [] five = {"A. more outgoing, think out loud", "B. more reserved, think to yourself"};
         String [] six = {"A. practical, realistic, experimental", "B. imaginative, innovative, theoretical"};
-        String [] seven = {"A. candid, straight forward, frank", "A. tactful, kind, encouraging"};
+        String [] seven = {"A. candid, straight forward, frank", "B. tactful, kind, encouraging"};
         String [] eight = {"A. plan, schedule", "B. unplanned, spontaneous"};
         String [] nine = {"A. seek many tasks, public activities, interaction with others", "B. seek private, solitary activities with quiet to concentrate"};
         String [] ten = {"A. standard, usual, conventional", "B. different, novel, unique"};
@@ -62,5 +62,40 @@ public class MbtiChecker {
                 }
             }
         }
+        
+        System.out.println();
+        
+        System.out.println("Hello " + userName + "You Selected");
+        System.out.println();
+        
+        String [] userExtrovertedIntrovertSelection = MbitFunctions.extrovertOrIntrovertSelection(userSelection, questions);
+        for(int index = 0; index < userExtrovertedIntrovertSelection.length; index++){
+            System.out.println(userExtrovertedIntrovertSelection[index]);
+        }
+        
+        System.out.println("Number of A selected: " + MbitFunctions.extrovertOrIntrovertASelectionCountIn(userSelection));
+        System.out.println("Number of B selected: " + MbitFunctions.extrovertOrIntrovertBSelectionCountIn(userSelection));
+        
+        System.out.println();
+        
+        String [] userSensingIntuitiveSelection = MbitFunctions.sensingOrIntuitiveSelection(userSelection, questions);
+        for(int index = 0; index < userSensingIntuitiveSelection.length; index++){
+            System.out.println(userSensingIntuitiveSelection[index]);
+        }
+        
+        System.out.println("Number of A selected: " + MbitFunctions.sensingOrIntuitiveASelectionCountIn(userSelection));
+        System.out.println("Number of B selected: " + MbitFunctions.sensingOrIntuitiveBSelectionCountIn(userSelection));
+        
+        System.out.println();
+        
+        String [] userThinkingFeelingSelection = MbitFunctions.thinkingOrFeelingSelection(userSelection, questions);
+        for(int index = 0; index < userThinkingFeelingSelection.length; index++){
+            System.out.println(userThinkingFeelingSelection[index]);
+        }
+        
+        System.out.println("Number of A selected: " + MbitFunctions.thinkingOrFeelingASelectionCountIn(userSelection));
+        System.out.println("Number of B selected: " + MbitFunctions.thinkingOrFeelingBSelectionCountIn(userSelection));
+        
+        System.out.println();
     }
 }
