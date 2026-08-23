@@ -1,13 +1,4 @@
 public class MbitFunctions {
-    public static String getFirstElementIn(String [] arrayOfStrings){
-        String firstElement = arrayOfStrings[0];
-        return firstElement;
-    }
-    
-    public static String getSecondElementIn(String [] arrayOfStrings){
-        String secondElement = arrayOfStrings[1];
-        return secondElement;
-    }
     
     public static String getFirstElementIn(String [][] arrayOfStrings,int index){
         String firstElement = arrayOfStrings[index][0];
