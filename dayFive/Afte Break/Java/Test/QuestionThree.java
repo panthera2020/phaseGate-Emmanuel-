@@ -11,7 +11,7 @@ public class QuestionThree {
              similarPrefix = "";
              
             for(int index = 0; index < word.length(); index++){
-                if(firstWord.charAt(index) == word.charAt(index) && index < firstWord.length()){
+                if(index < firstWord.length() && firstWord.charAt(index) == word.charAt(index)){
                     similarPrefix += firstWord.charAt(index);
                     
                 }

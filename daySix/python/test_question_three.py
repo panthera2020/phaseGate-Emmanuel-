@@ -5,10 +5,10 @@ from question_three import *
 class TestQuesionThree(TestCase):
 
     def test_thatWhen_iEnterAnArray_ofIntegers_allTheZeroElement_areAtTheEndOf_theArray(self):
-        arrayOfNumbers = [5,0,3,0,2,0]
+        array_of_numbers = [5,0,3,0,2,0]
         
-        actualArrayOfPrimes = moveZeroElementToEndOfArrayIn(arrayOfNumbers)
+        actual_array_of_primes = move_zero_element_to_end_of_array_in(array_of_numbers)
         
-        expectedArrayOfPrimes = [5,3,2,0,0,0]
+        expected_array_of_primes = [5,3,2,0,0,0]
         
-        self.assertEqual(expectedArrayOfPrimes, actualArrayOfPrimes) 
+        self.assertEqual(expected_array_of_primes, actual_array_of_primes) 
