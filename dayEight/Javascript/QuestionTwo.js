@@ -1,4 +1,4 @@
-let isBracketComplete(brackets){
+let isBracketComplete=(brackets)=>{
     let openBracketCounter = 0;
     let closeBracketCounter = 0;
     let openSquareBracketCounter = 0;
