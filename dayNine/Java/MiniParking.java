@@ -51,7 +51,15 @@ To exit Parking Area - Press 0
                             input.nextLine();
                             
                             if(slotChoice >= 1 && slotChoice <= 20){
-                                park.chooseSlot(slotChoice);
+                                if(park.isSlotEmpty(slotChoice)){
+                                    park.chooseSlot(slotChoice);
+                                }
+                                else{
+                                    System.out.println();
+                                    System.out.println("SLOT IN USE");
+                                    System.out.println("Pick Another SLOT");
+                                    }
+                                
                             }else{
                                 System.out.println("Invalid Parking SLOT");
                             }
@@ -67,15 +75,14 @@ To exit Parking Area - Press 0
                                 System.out.println("Enter SLOT Number: ");
                                 int userSlot = input.nextInt();
                                 if(userSlot >= 1 && userSlot <= 20){
-                                    if(park.isSlotEmpty(userSlot)){                                
+                                    if(!park.isSlotEmpty(userSlot)){                                
                                         park.checkOut(userSlot);
                                         System.out.println();
                                         System.out.println("Have a Great Day!!!");
                                         break;
-                                    }else{
-                                    System.out.println();
-                                        System.out.println("SLOT IN USE");
-                                        System.out.println("Pick Another SLOT");
+                                    }
+                                    else{
+                                        System.out.println("Car Slot is Empty");
                                     }
                                 }
                                 else{

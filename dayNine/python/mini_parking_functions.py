@@ -1,4 +1,4 @@
-parking_space = [0] * 20
+parking_space = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 space_availability = [["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"],["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"],["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"],["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"],["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"], ["Empty", "Parked"]]
 
