@@ -14,13 +14,13 @@ def check_parking_space():
 
 
 def choose_slot(slot):
-    global parking_space
+    
     if parking_space[slot - 1] == 0:
         parking_space[slot - 1] += 1
 
 
 def check_out(slot):
-    global parking_space
+    
     if parking_space[slot - 1] == 1:
         parking_space[slot - 1] -= 1
 
