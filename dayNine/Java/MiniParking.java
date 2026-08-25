@@ -7,11 +7,12 @@ public class MiniParking {
         int enterChoice = 0;
         
         while(enterChoice != 2){
+        
             String welcomeMessage = """ 
-Welcome To VDM CarPark
+                Welcome To VDM CarPark
 
-ENTER PARK - PRESS 1
-LEAVE PARK - PRESS 2
+                ENTER PARK - PRESS 1
+                LEAVE PARK - PRESS 2
 
             """;
             
