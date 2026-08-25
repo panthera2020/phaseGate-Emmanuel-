@@ -3,7 +3,7 @@ let parkingSpace = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let spaceAvailability = [["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"],["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"],["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"],["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"],["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"], ["Empty","Parked"]];
 
 let checkParkingSpace=()=>{
-    let slotAvailable = [];
+    let slotAvailable = [["","","","","","","","","","","","","","","","","","","",""];
     for (let index = 0; index < parkingSpace.length; index++) {
         if (parkingSpace[index] === 0) {
             slotAvailable[index] = spaceAvailability[index][0];
