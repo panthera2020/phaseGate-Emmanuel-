@@ -53,7 +53,28 @@ public class TestMiniParkingFunctions {
         
         //Check
         assertArrayEquals(expectedSlotNowAvailable,actualSlotNowAvailable);
+    }
+    
+    @Test
+    void TestThatWhenICheckASlotItReturnsFalseIfFilled(){
+        MiniParkingFunctions park = new MiniParkingFunctions();
+        //Given
+        int slot = 1;
+        park.chooseSlot(slot);
         
+        //When
+        boolean actualAnswer = park.isSlotEmpty(slot);
+        boolean expectedAnswer = false;
         
+        //Check
+        assertEquals(expectedAnswer,actualAnswer);
     }
 }
+
+
+
+
+
+
+
+

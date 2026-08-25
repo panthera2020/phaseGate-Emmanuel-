@@ -36,4 +36,12 @@ public class MiniParkingFunctions {
             this.parkingSpace[slot - 1]--;
         }
     }
+    
+    public boolean isSlotEmpty(int slot){
+        boolean isEmpty = false;
+        if(parkingSpace[slot - 1] == 0){
+            isEmpty = true;
+        }
+    return isEmpty;
+    }
 }
