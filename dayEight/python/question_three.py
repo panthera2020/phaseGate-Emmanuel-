@@ -3,7 +3,7 @@ def getSumOfElementsInAnArrayOfAnArray(multidimensionalArrayOfNumbers):
     total_sum = 0
     
     for index in range(len(multidimensionalArrayOfNumbers)):
-        elements = [multidimensionalArrayOfNumbers[index]]
+        elements = multidimensionalArrayOfNumbers[index]
         total_sum = 0
         for count in range(len(elements)):
             total_sum += elements[count]

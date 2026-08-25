@@ -1,5 +1,5 @@
 let isEven=(number)=>{
-    isEven = false;
+    let isEven = false;
     if(number % 2 == 0){
         isEven = true;
     }

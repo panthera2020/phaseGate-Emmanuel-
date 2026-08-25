@@ -12,28 +12,28 @@ def isBracketComplete(brackets):
     for index in range(len(brackets)):
 
         
-        if(brackets.charAt(index) == '('):
+        if(brackets[index] == "("):
             openBracketCounter += 1
         
-        if(brackets.charAt(index) == ')'):
+        if(brackets[index] == ")"):
             closeBracketCounter += 1
         
-        if(brackets.charAt(index) == '['):
+        if(brackets[index] == "["):
             openSquareBracketCounter += 1
         
-        if(brackets.charAt(index) == ']'):
+        if(brackets[index] == "]"):
             closeSquareBracketCounter += 1
         
-        if(brackets.charAt(index) == '{'):
+        if(brackets[index] == "{"):
             openCurlyBracesCounter += 1
         
-        if(brackets.charAt(index) == '}'):
+        if(brackets[index] == "}"):
             closeCurlyBracesCounter += 1
         
-        if(brackets.charAt(index) == '<'):
+        if(brackets[index] == "<"):
             openAngleBracketsCounter += 1
         
-        if(brackets.charAt(index) == '>'):
+        if(brackets[index] == ">"):
             closeAngleBracketsCounter += 1
     
     if((openAngleBracketsCounter == closeAngleBracketsCounter) and (openBracketCounter == closeBracketCounter) and (openCurlyBracesCounter == closeCurlyBracesCounter) and (openSquareBracketCounter == closeSquareBracketCounter)):
