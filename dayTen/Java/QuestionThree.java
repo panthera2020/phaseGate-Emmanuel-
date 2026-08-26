@@ -20,15 +20,23 @@ public class QuestionThree {
         
         boolean isDuplicate = false;
         int [] sortedArray = sortArray(arrayOfNumbers);
+        int counter = 0;
         
         for(int index = 0; index < sortedArray.length; index++){
+            counter = 0;
             for(int count = 0; count < sortedArray.length; count++){
                 if(sortedArray[index] == sortedArray[count]){
-                    isDuplicate = true;
-                    break;
+                    counter++;
                 }
             }
+            
+            if(counter > 1){
+                isDuplicate = true;
+                break;
+            }
         }
+        
+        
         
         return isDuplicate;
     }
