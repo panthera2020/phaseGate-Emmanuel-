@@ -1,0 +1,38 @@
+public class QuestionOne {
+    
+    public static int[] addToLastElement(int [] arrayOfNumbers){
+        if((arrayOfNumbers[arrayOfNumbers.length -1]) >= 9){
+            
+                int [] newArray = new int[arrayOfNumbers.length + 1];
+                for(int count = 0; count < arrayOfNumbers.length; count++){
+                    newArray[count] = arrayOfNumbers[count];
+                    IO.println(newArray[count]);
+                }
+                arrayOfNumbers[arrayOfNumbers.length -1] = arrayOfNumbers[arrayOfNumbers.length - 1] + 1;  
+                int digit = arrayOfNumbers[arrayOfNumbers.length - 1];
+                IO.println(digit);
+                int counter = (newArray.length - 1);
+                
+                while(digit != 0){
+                    int number = digit % 10;
+
+                    newArray[counter] = number;
+                    
+                    digit /= 10; 
+                    counter--;
+                    
+                    if(counter <= (arrayOfNumbers.length - 3)){
+                        break;
+                    }
+                }
+                for(int index = 0; index< newArray.length; index++){
+                    IO.println(newArray[index]);
+                }
+                return newArray;
+        
+        }else{
+            arrayOfNumbers[arrayOfNumbers.length -1] = arrayOfNumbers[arrayOfNumbers.length - 1] + 1;     
+            return arrayOfNumbers;   
+        }        
+    }
+}
