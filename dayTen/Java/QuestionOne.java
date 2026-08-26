@@ -6,11 +6,11 @@ public class QuestionOne {
                 int [] newArray = new int[arrayOfNumbers.length + 1];
                 for(int count = 0; count < arrayOfNumbers.length; count++){
                     newArray[count] = arrayOfNumbers[count];
-                    IO.println(newArray[count]);
+
                 }
                 arrayOfNumbers[arrayOfNumbers.length -1] = arrayOfNumbers[arrayOfNumbers.length - 1] + 1;  
                 int digit = arrayOfNumbers[arrayOfNumbers.length - 1];
-                IO.println(digit);
+
                 int counter = (newArray.length - 1);
                 
                 while(digit != 0){
@@ -24,9 +24,6 @@ public class QuestionOne {
                     if(counter <= (arrayOfNumbers.length - 3)){
                         break;
                     }
-                }
-                for(int index = 0; index< newArray.length; index++){
-                    IO.println(newArray[index]);
                 }
                 return newArray;
         

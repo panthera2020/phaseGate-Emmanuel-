@@ -36,8 +36,6 @@ public class QuestionThree {
             }
         }
         
-        
-        
         return isDuplicate;
     }
 }
